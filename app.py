@@ -12,6 +12,7 @@ from quart import (
     request,
     send_from_directory,
     render_template,
+    redirect
 )
 
 from openai import AsyncAzureOpenAI
