@@ -46,11 +46,7 @@ def create_app():
 
 @bp.route("/")
 async def index():
-    return await render_template(
-        "index.html",
-        title=app_settings.ui.title,
-        favicon=app_settings.ui.favicon
-    )
+    return redirect(os.environ.get("REDIRECT_URL"))
 
 
 @bp.route("/favicon.ico")
